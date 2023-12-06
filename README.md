@@ -6,7 +6,7 @@ A polyfill for ES6's Array.from()
 * 389 bytes minified
 * Works in old browsers (Tested in IE6)
 
-This differs from the native Array.from() in that this will check if the argument is an array-like first by checking if it has a positive int as its length property before checking if it's an iterable.
+This differs from the native Array.from() in that this will process the argument as an array-like first if it has a positive int in valid range as its length property before processing it as an iterable.
 
 When [Symbol.iterator]() iterator is not available this polyfill will attempt to get an iterator from ["entries"]()
 And if that doesn't work it checks for a next() method and uses that.
