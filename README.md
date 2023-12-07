@@ -14,6 +14,6 @@ This was also designed to be a replacement for native Array.from() so if you don
 
     <script>Array.from||document.write("<script src=Array.from.min.js><\/script>");</script>
 
-To support old browsers you should always pass the iterator itself to Array.from() rather than the iterable since old browsers don't support iterables. But if it's an array or an array-like you can just pass it normally. For example to get the values from a Set object use:
+To support old browsers you should always pass the iterator itself to Array.from() rather than the iterable since old browsers don't support iterables without Symbol.iterator which this does not attempt to polyfill. But if it's an array or an array-like you can just pass it normally. For example to get the values from a Set object use:
 
     Array.from(new Set([1,2,3]).values());// returns [1,2,3]
