@@ -3,7 +3,7 @@ Fast AF Polyfill
 A polyfill for ES6's Array.from()
 
 * 40% faster than ES6's native Array.from() according to jsbench.me (native Array.from() is 66% slower)
-* 411 bytes minified
+* 415 bytes minified
 * Works in old browsers (Tested in IE6)
 
 This differs from the native Array.from() in that native Array.from() processes array-likes as iterables first if they have a Symbol.iterator method. Where this will attempt to process it as an array-like first before trying to process it as an iterable.
